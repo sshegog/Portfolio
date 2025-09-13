@@ -71,7 +71,7 @@ h2 {
     font-size: 28px;
     color: var(--primary);
     text-align: center;
-    margin: 60px auto 20px auto;
+    margin: 40px auto 20px auto;
     font-weight: bold;
     text-shadow: 1px 1px 3px var(--light);
     width: 100%;
@@ -161,6 +161,12 @@ a {
   text-align: center;
   transition: transform 0.3s ease, background-color 0.3s, border-color 0.3s;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  width: 120px;
+  height: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .contact-item {
@@ -205,16 +211,22 @@ a {
 }
 .skill p {
   font-weight: bold;
-  font-size: 0.9em;
+  font-size: 0.8em;
   color: var(--secondary);
   margin: 0;
+  background: none;
+  border: none;
+  box-shadow: none;
+  padding: 0;
+  border-radius: 0;
+  line-height: 1.2;
 }
 
 .skill img {
-  width: 60%;   
-  height: 40px;  
+  width: 50px;   
+  height: 50px;  
   object-fit: contain;
-  margin-bottom: 5px;
+  margin-bottom: 8px;
 }
 
 .skill img:hover {
@@ -227,7 +239,7 @@ a {
   flex-wrap: wrap;
   justify-content: center;  /* 👈 centers the skill blocks */
   gap: 20px;                /* optional: spacing between items */
-  padding: 20px 0 60px 0;   /* added bottom padding for category separation */
+  padding: 20px 0 40px 0;   /* reduced bottom padding for tighter spacing */
   text-align: center;       /* centers the text under icons */
   max-width: 1200px;
   margin: 0 auto;
