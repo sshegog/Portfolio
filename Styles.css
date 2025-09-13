@@ -258,6 +258,69 @@ a {
   margin: 0 auto;
 }
 
+.projects-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px 0;
+  text-align: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.project-item {
+  background-color: #FFA4CB;
+  border: 2px solid var(--primary);
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease, background-color 0.3s, border-color 0.3s;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  width: 250px;
+  min-height: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.project-item:hover {
+  transform: translateY(-5px);
+  background-color: var(--light);
+  border-color: var(--secondary);
+}
+
+.project-item a {
+  color: var(--secondary);
+  text-decoration: none;
+  display: block;
+  width: 100%;
+}
+
+.project-item a:hover {
+  color: var(--accent);
+}
+
+.project-item h4 {
+  font-size: 18px;
+  color: var(--secondary);
+  margin: 0 0 10px 0;
+  font-weight: bold;
+}
+
+.project-item p {
+  font-size: 14px;
+  color: var(--accent);
+  margin: 0;
+  background: none;
+  border: none;
+  box-shadow: none;
+  padding: 0;
+  border-radius: 0;
+  font-style: italic;
+}
+
 @media (max-width: 600px) {
   .skills-grid {
     flex-direction: column;
@@ -265,6 +328,11 @@ a {
   }
   
   .contact-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .projects-grid {
     flex-direction: column;
     align-items: center;
   }
