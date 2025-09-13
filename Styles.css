@@ -21,7 +21,10 @@ body {
   font-weight: normal;
   text-align: center;
   font-style: italic;
-  margin: 50px 5% 0 5%;
+  margin: 0;
+  padding: 50px 5% 50px 5%;
+  min-height: 100vh;
+  box-sizing: border-box;
 }
 
 h1 {
@@ -29,22 +32,49 @@ h1 {
   color: var(--primary);
   text-shadow: 2px 2px 5px var(--light);
   text-align: center;
-  margin-top: 180px;
+  margin: 180px auto 10px auto;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.subtitle {
+  font-size: 20px;
+  color: var(--secondary);
+  text-align: center;
+  font-style: normal;
+  font-weight: 500;
+  margin: 0 auto 40px auto;
+  max-width: 600px;
+  background: none;
+  border: none;
+  box-shadow: none;
+  padding: 0;
+  border-radius: 0;
 }
 
 p {
-  margin-left: 10%;
-  margin-right: 10%;
-   padding: 10px;
+  margin: 0 auto;
+  padding: 10px;
   border-radius: 8px;
   background-color: #FFA4CB; 
- 
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); 
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
 }
 
 h2 {
-    margin-top: 140px;
+    margin: 140px auto 40px auto;
     text-align: center;
+    width: 100%;
+}
+
+.skill-category {
+    font-size: 28px;
+    color: var(--primary);
+    text-align: center;
+    margin: 60px auto 20px auto;
+    font-weight: bold;
+    text-shadow: 1px 1px 3px var(--light);
+    width: 100%;
 }
 
 .about-section {
@@ -52,9 +82,10 @@ h2 {
   align-items: center;
   justify-content: center;
   gap: 40px;
-  margin: 20px auto;
+  margin: 40px auto;
   flex-wrap: wrap; /* allows responsiveness */
   padding: 20px;
+  max-width: 1200px;
 }
 
 .profile-image img {
@@ -82,60 +113,44 @@ h2 {
   border: none;
   box-shadow: none;
   padding: 0;
-  margin: 0;
+  margin: 20px auto;
+  display: block;
+  text-align: center;
+  width: fit-content;
 }
 
 .top-right-buttons {
   position: fixed;
-  top: 20px;
-  right: 20px;
+  top: 0;
+  right: 0;
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  padding: 15px 25px;
+  border-bottom-left-radius: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
 }
 
 .top-right-buttons button {
   margin-left: 10px;
-  background-color: var(--primary);
+  background-color: rgba(255, 255, 255, 0.2);
   color: #FFE3EF;
-  border: none;
+  border: 2px solid rgba(255, 255, 255, 0.3);
   padding: 10px 15px;
-  border-radius: 5px;
+  border-radius: 8px;
   cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
 }
 
 .top-right-buttons button:hover {
-  background-color: var(--secondary);
-}
-
-h4 {
-  font-size: 20px;
-  color: var(--accent);
-  text-shadow: 2px 2px 5px var(--light);
-  margin-bottom: 40px;
-  margin-top: 120px;
-  text-align: center;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-color: rgba(255, 255, 255, 0.5);
+  transform: translateY(-2px);
 }
 
 a {
   color: var(--primary);
   text-decoration: none;
-}
-
-.contact {
-  border: 3px solid var(--primary); 
-    border-radius: 80px;
-  background-color: #FFA4CB; 
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    margin-top: 50px; 
-}
-
-.contact a {
-  color: var(--secondary);
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.contact a:hover {
-  color: var(--accent);
-  text-decoration: underline;
 }
 
 .skill {
@@ -146,6 +161,47 @@ a {
   text-align: center;
   transition: transform 0.3s ease, background-color 0.3s, border-color 0.3s;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.contact-item {
+  text-align: center;
+  min-width: 120px;
+}
+
+.contact-item a {
+  color: var(--secondary);
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1em;
+  display: block;
+}
+
+.contact-item a:hover {
+  color: var(--accent);
+}
+
+.contact-item img {
+  width: 60%;   
+  height: 40px;  
+  object-fit: contain;
+  margin-bottom: 5px;
+}
+
+.contact-item img:hover {
+  transform: rotate(360deg);
+  transition: transform 0.6s ease-in-out;
+}
+
+.contact-item p {
+  font-weight: bold;
+  font-size: 0.9em;
+  color: var(--secondary);
+  margin: 0;
+  background: none;
+  border: none;
+  box-shadow: none;
+  padding: 0;
+  border-radius: 0;
 }
 .skill p {
   font-weight: bold;
@@ -171,12 +227,30 @@ a {
   flex-wrap: wrap;
   justify-content: center;  /* 👈 centers the skill blocks */
   gap: 20px;                /* optional: spacing between items */
-  padding: 20px 0;
+  padding: 20px 0 60px 0;   /* added bottom padding for category separation */
   text-align: center;       /* centers the text under icons */
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.contact-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px 0;
+  text-align: center;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 @media (max-width: 600px) {
   .skills-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .contact-grid {
     flex-direction: column;
     align-items: center;
   }
