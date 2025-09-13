@@ -135,10 +135,12 @@ h2 {
   background-color: rgba(255, 255, 255, 0.2);
   color: #FFE3EF;
   border: 2px solid rgba(255, 255, 255, 0.3);
-  padding: 10px 15px;
+  padding: 8px 12px;
   border-radius: 8px;
   cursor: pointer;
-  font-weight: bold;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 16px;
   transition: all 0.3s ease;
 }
 
